@@ -10,8 +10,10 @@ def foot(fs,page=''):
     return f'<div class="foot" style="font-size:{fs}px"><div class="soc">{soc(int(fs*1.35))}<span class="sep"></span><span>energy.eementor.co</span></div><div style="font-weight:500">{page}</div></div>'
 def page(name,w,h,body,pad,logo_h):
     html=f'''<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head><body>
-<div class="frame" data-size="{w}x{h}" style="width:{w}px;height:{h}px"><div class="arcs"></div><div class="inner" style="padding:{pad}">
-<img class="logo" src="logo.png" style="height:{logo_h}px;width:auto;align-self:flex-start">
+<div class="frame" data-size="{w}x{h}" style="width:{w}px;height:{h}px"><div class="arcs" style="top:{int(logo_h*2.6)-260}px"></div>
+<div style="position:absolute;left:0;right:0;top:0;height:{int(logo_h*2.6)}px;background:#fff;display:flex;align-items:center;padding-left:{pad.split()[1]};border-bottom:6px solid #DE544A">
+<img src="logo_energy.png" style="height:{int(logo_h*1.55)}px;width:auto"></div>
+<div class="inner" style="top:{int(logo_h*2.6)+6}px;padding:{pad}">
 {body}</div><div class="bar"></div></div></body></html>'''
     open(os.path.join(S,name),'w').write(html)
 B='#1B3A7B';R='#DE544A';C='#26558C';G='#C6C6C6'
@@ -23,7 +25,7 @@ def cells(x0,y0,n=4,w=110,h=200,gap=34):
         s+=f'<text x="{x+w/2}" y="{y0+h/2+12}" text-anchor="middle" font-size="34" font-weight="600" fill="#fff">{i+1}</text>'
         if i<n-1: s+=f'<line x1="{x+w}" y1="{y0+40}" x2="{x+w+gap}" y2="{y0+40}" stroke="{G}" stroke-width="5"/>'
     return s
-P='88px 84px 64px'
+P='56px 84px 64px'
 def slide(name,n,body):
     page(name,1080,1350,body+'<div style="flex:1"></div>'+foot(22,f'{n} / 5'+(' &nbsp;·&nbsp; SWIPE &rarr;' if n<5 else '')),P,54)
 # 1
@@ -35,7 +37,7 @@ cov=f'''<svg width="912" height="400" viewBox="0 0 912 400">{cells(70,30)}
 <path d="M670 352 H790" stroke="#fff" stroke-width="4" stroke-dasharray="10 8"/>
 <rect x="790" y="314" width="110" height="76" rx="8" fill="{C}" stroke="#fff" stroke-width="3"/><text x="845" y="361" text-anchor="middle" font-size="24" font-weight="500" fill="#fff">Host</text></svg>'''
 chips=''.join(f'<span class="chip"><b style="color:{R};font-weight:600">0{i+1}</b>{t}</span>' for i,t in enumerate(['Monitoring','Protection','Balancing','State estimation','Communication']))
-slide('bms1.html',1,f'''<div class="kicker" style="font-size:26px;margin-top:70px">Battery engineering</div>
+slide('bms1.html',1,f'''<div class="kicker" style="font-size:26px;margin-top:0">Battery engineering</div>
 <h1 style="font-size:96px;margin-top:22px">What a <em>BMS</em><br>actually does</h1>
 <p style="font-size:33px;margin-top:30px;max-width:880px">It's not just an on/off switch. Here are the five jobs an engineered lithium pack relies on.</p>
 <div style="margin-top:46px">{cov}</div>
@@ -47,7 +49,7 @@ mon=f'''<svg width="912" height="520" viewBox="0 0 912 520">{cells(150,50)}'''+'
 <rect x="756" y="95" width="116" height="44" rx="6" fill="{B}" stroke="#fff" stroke-width="2.5"/><text x="814" y="126" text-anchor="middle" font-size="22" font-weight="600" fill="#fff">I shunt</text>
 <line x1="726" y1="117" x2="756" y2="117" stroke="{G}" stroke-width="5"/><path d="M814 139 V450 H770" stroke="#fff" stroke-width="3" fill="none"/>
 <rect x="120" y="400" width="650" height="96" rx="8" fill="{R}"/><text x="445" y="459" text-anchor="middle" font-size="30" font-weight="600" fill="#fff">BMS measures V · I · T</text></svg>'''
-slide('bms2.html',2,f'''<div class="kicker" style="font-size:26px;margin-top:70px">01 · Monitoring</div>
+slide('bms2.html',2,f'''<div class="kicker" style="font-size:26px;margin-top:0">01 · Monitoring</div>
 <h2 style="font-size:82px;margin-top:22px">It watches every<br><em>cell group</em></h2>
 <p style="font-size:33px;margin-top:28px;max-width:890px">The BMS continuously measures the voltage of each series cell group, the pack current and the temperature at key points in the pack.</p>
 <div style="margin-top:54px">{mon}</div>''')
@@ -59,7 +61,7 @@ sw=f'''<svg width="912" height="140" viewBox="0 0 912 140"><rect x="0" y="25" wi
 <line x1="200" y1="68" x2="360" y2="68" stroke="{G}" stroke-width="5"/><circle cx="360" cy="68" r="8" fill="{G}"/><line x1="360" y1="68" x2="450" y2="22" stroke="{R}" stroke-width="7" stroke-linecap="round"/><circle cx="470" cy="68" r="8" fill="{G}"/>
 <text x="415" y="134" text-anchor="middle" font-size="21" font-weight="500" fill="#fff">MOSFETs / contactor open</text>
 <line x1="470" y1="68" x2="680" y2="68" stroke="{G}" stroke-width="5" stroke-dasharray="12 10"/><rect x="680" y="25" width="232" height="86" rx="8" fill="none" stroke="{G}" stroke-width="3"/><text x="796" y="78" text-anchor="middle" font-size="24" font-weight="500" fill="{G}">Load / charger</text></svg>'''
-slide('bms3.html',3,f'''<div class="kicker" style="font-size:26px;margin-top:70px">02 · Protection</div>
+slide('bms3.html',3,f'''<div class="kicker" style="font-size:26px;margin-top:0">02 · Protection</div>
 <h2 style="font-size:82px;margin-top:22px">It cuts the power<br><em>before damage</em></h2>
 <p style="font-size:31px;margin-top:24px;max-width:900px">When a limit is crossed, the BMS opens the charge or discharge path, usually through MOSFETs or a contactor.</p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px">{tiles}</div>
@@ -72,7 +74,7 @@ bal=f'''<svg width="912" height="400" viewBox="0 0 912 400"><text x="160" y="34"
 {bars(550,[240,240,240,240],'#fff')}<line x1="540" y1="80" x2="870" y2="80" stroke="{R}" stroke-width="3" stroke-dasharray="10 8"/>
 <line x1="0" y1="322" x2="320" y2="322" stroke="{G}" stroke-width="2"/><line x1="540" y1="322" x2="870" y2="322" stroke="{G}" stroke-width="2"/>
 <text x="160" y="368" text-anchor="middle" font-size="22" fill="{G}">Lowest group limits capacity</text><text x="700" y="368" text-anchor="middle" font-size="22" fill="{G}">Groups at the same level</text></svg>'''
-slide('bms4.html',4,f'''<div class="kicker" style="font-size:26px;margin-top:70px">03 · Balancing</div>
+slide('bms4.html',4,f'''<div class="kicker" style="font-size:26px;margin-top:0">03 · Balancing</div>
 <h2 style="font-size:82px;margin-top:22px">It keeps cell groups<br><em>in step</em></h2>
 <p style="font-size:31px;margin-top:24px;max-width:900px">Small differences between cells grow over many cycles. Balancing brings every cell group back to the same state of charge, so the pack keeps its usable capacity.</p>
 <div style="margin-top:44px">{bal}</div>
@@ -81,7 +83,7 @@ slide('bms4.html',4,f'''<div class="kicker" style="font-size:26px;margin-top:70p
 <div class="tile" style="padding:24px"><div style="font-size:28px;font-weight:600">Active</div><p style="font-size:23px;margin-top:6px">Moves charge from higher groups to lower ones</p></div></div>''')
 # 5
 protos=''.join(f'<span class="chip" style="font-size:28px">{p}</span>' for p in ['CAN','RS485','UART','SMBus'])
-slide('bms5.html',5,f'''<div class="kicker" style="font-size:26px;margin-top:70px">04 · State estimation &nbsp; 05 · Communication</div>
+slide('bms5.html',5,f'''<div class="kicker" style="font-size:26px;margin-top:0">04 · State estimation &nbsp; 05 · Communication</div>
 <h2 style="font-size:74px;margin-top:22px">It tracks charge and<br><em>talks to your system</em></h2>
 <div class="tile" style="padding:30px 32px;margin-top:40px"><div style="font-size:32px;font-weight:600"><span style="color:{R}">SoC</span> &nbsp;State of charge</div><p style="font-size:26px;margin-top:8px">How much energy is left, estimated from voltage, current and history. Many BMS also track <b style="color:#fff;font-weight:600">SoH</b>, state of health.</p>
 <div style="margin-top:22px;height:26px;border-radius:3px;background:rgba(255,255,255,.12);overflow:hidden"><div style="width:68%;height:100%;background:linear-gradient(90deg,#fff,{R})"></div></div></div>

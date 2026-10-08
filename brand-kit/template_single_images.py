@@ -18,20 +18,20 @@ def decides(fs):
     it=['Which cell you choose','How many cells go in parallel','How the BMS is sized','How the pack handles heat']
     return ''.join(f'<div style="display:flex;gap:14px;align-items:flex-start;margin-top:{int(fs*.5)}px"><span style="flex:none;width:{int(fs*.42)}px;height:{int(fs*.42)}px;margin-top:{int(fs*.36)}px;background:{R}"></span><span style="font-size:{fs}px;font-weight:500">{t}</span></div>' for t in it)
 def btn(fs,t='Learn more'): return f'<span class="btn" style="font-size:{fs}px;padding:{int(fs*.5)}px {int(fs*1.1)}px">{t}</span>'
-LP='40px 52px 34px'
-page('load_li.html',1200,627,f'''<div style="display:flex;gap:40px;flex:1;margin-top:18px">
+LP='24px 52px 34px'
+page('load_li.html',1200,627,f'''<div style="display:flex;gap:40px;flex:1;margin-top:0">
 <div style="flex:1.25;display:flex;flex-direction:column"><div class="kicker" style="font-size:16px">Battery sizing</div>
-<h1 style="font-size:44px;margin-top:6px">Start with the <em>load profile</em></h1><div style="margin-top:14px">{chart}</div></div>
+<h1 style="font-size:40px;margin-top:4px">Start with the <em>load profile</em></h1><div style="margin-top:8px;width:84%">{chart}</div></div>
 <div style="flex:.8;display:flex;flex-direction:column;justify-content:center"><p style="font-size:20px;color:#fff;font-weight:500">Same voltage and capacity can still need a different battery. The load decides:</p>{decides(20)}
 <div style="margin-top:26px">{btn(17,'Send us your load profile')}</div></div></div>
 {foot(16)}''',LP,34)
-page('load_sq.html',1080,1350,f'''<div class="kicker" style="font-size:26px;margin-top:64px">Battery sizing</div>
+page('load_sq.html',1080,1350,f'''<div class="kicker" style="font-size:26px;margin-top:0">Battery sizing</div>
 <h1 style="font-size:74px;margin-top:16px">Start with the<br><em>load profile</em></h1>
 <p style="font-size:31px;margin-top:24px;max-width:880px">Two products can need the same voltage and capacity, and still need completely different batteries.</p>
 <div class="tile" style="margin-top:28px;padding:20px 26px 10px">{chart}</div>
 <p style="font-size:30px;color:#fff;font-weight:600;margin-top:22px;text-transform:uppercase">The load decides:</p>
 <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:30px">{decides(26)}</div>
-<div style="flex:1;min-height:24px"></div>{foot(22)}''','88px 84px 64px',54)
+<div style="flex:1;min-height:24px"></div>{foot(22)}''','52px 84px 64px',54)
 icons={
 'Logistics robots':'<rect x="8" y="22" width="48" height="20" rx="4"/><circle cx="18" cy="48" r="5"/><circle cx="46" cy="48" r="5"/><rect x="25" y="12" width="14" height="10" rx="2"/><line x1="16" y1="32" x2="30" y2="32"/>',
 'Drones':'<rect x="24" y="27" width="16" height="10" rx="3"/><line x1="24" y1="28" x2="13" y2="18"/><line x1="40" y1="28" x2="51" y2="18"/><line x1="24" y1="36" x2="13" y2="46"/><line x1="40" y1="36" x2="51" y2="46"/><ellipse cx="13" cy="16" rx="9" ry="3"/><ellipse cx="51" cy="16" rx="9" ry="3"/><ellipse cx="13" cy="48" rx="9" ry="3"/><ellipse cx="51" cy="48" rx="9" ry="3"/>',
@@ -48,9 +48,9 @@ page('apps_li.html',1200,627,f'''<div style="display:flex;gap:40px;flex:1;margin
 <div style="margin-top:22px">{btn(16)}</div></div>
 <div style="flex:1.15;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-content:center">{''.join(tile(n,48,19,18) for n in icons)}</div></div>
 <div style="height:14px"></div>{foot(16)}''',LP,34)
-page('apps_sq.html',1080,1350,f'''<div class="kicker" style="font-size:26px;margin-top:64px">Applications</div>
+page('apps_sq.html',1080,1350,f'''<div class="kicker" style="font-size:26px;margin-top:0">Applications</div>
 <h1 style="font-size:70px;margin-top:16px">Where custom<br>battery packs <em>matter</em></h1>
 <p style="font-size:29px;margin-top:20px;max-width:880px">When a product has limited space, an unusual voltage, high pulse current, specific connectors or a fixed mechanical envelope.</p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px">{''.join(tile(n,58,27,22) for n in icons)}</div>
-<div style="flex:1;min-height:24px"></div>{foot(22)}''','88px 84px 64px',54)
+<div style="flex:1;min-height:24px"></div>{foot(22)}''','52px 84px 64px',54)
 print('ok2')
