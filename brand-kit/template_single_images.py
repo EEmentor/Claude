@@ -1,5 +1,5 @@
 import os,sys
-exec(open(os.path.join(os.path.dirname(__file__),'gen.py')).read().split("B='#1B3A7B'")[0])
+exec(open(os.path.join(os.path.dirname(__file__),'template_bms_carousel.py')).read().split("B='#1B3A7B'")[0])
 B='#1B3A7B';R='#DE544A';C='#26558C';G='#C6C6C6'
 chart=f'''<svg viewBox="0 0 720 414" style="width:100%;height:auto">
 <line x1="60" y1="20" x2="60" y2="350" stroke="{G}" stroke-width="2.5"/><line x1="60" y1="350" x2="710" y2="350" stroke="{G}" stroke-width="2.5"/>
