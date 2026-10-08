@@ -1,0 +1,23 @@
+@font-face{font-family:Poppins;font-weight:400;src:url(poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:500;src:url(poppins-latin-500-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(poppins-latin-700-normal.woff2)}
+:root{--blue:#1B3A7B;--blue2:#224B87;--blue3:#26558C;--red:#DE544A;--red2:#B24646;--white:#FFFFFF;--g1:#EAEAEA;--g2:#C6C6C6;--line:rgba(255,255,255,.22)}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:#fff;-webkit-font-smoothing:antialiased}
+.frame{position:relative;overflow:hidden;background:var(--blue)}
+.frame .arcs{position:absolute;right:-260px;top:-260px;width:900px;height:900px;border-radius:50%;background:repeating-radial-gradient(circle,rgba(255,255,255,.045) 0 2px,transparent 2px 26px);pointer-events:none}
+.bar{position:absolute;left:0;right:0;bottom:0;height:14px;background:linear-gradient(90deg,#1B3A7B 0%,#8C9BCB 30%,#FFFFFF 50%,#F7A9A3 72%,#DE544A 100%)}
+.inner{position:absolute;inset:0;display:flex;flex-direction:column}
+.logo{display:block}
+.kicker{font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--red)}
+h1,h2{margin:0;font-weight:500;text-transform:uppercase;letter-spacing:-.01em;line-height:1.02}
+h1 em,h2 em{font-style:normal;color:var(--red)}
+p{margin:0;color:var(--g1);line-height:1.5;font-weight:400}
+.foot{display:flex;justify-content:space-between;align-items:center;color:#fff}
+.soc{display:flex;align-items:center;gap:14px;font-weight:400}
+.soc .sep{width:2px;align-self:stretch;background:#fff;opacity:.8}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.tile{background:rgba(255,255,255,.07);border:2px solid var(--line);border-radius:6px}
+.chip{display:inline-flex;align-items:center;gap:10px;border:2px solid var(--line);border-radius:4px;padding:8px 18px;font-weight:500}
+svg text{font-family:Poppins,sans-serif}
