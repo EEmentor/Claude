@@ -1,0 +1,26 @@
+name: fetch-assets
+on:
+  push:
+    paths: ['fetch/urls.txt']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        run: |
+          mkdir -p fetch/out
+          while read -r name url; do
+            [ -z "$name" ] && continue
+            curl -sSL --fail -o "fetch/out/$name" "$url" || echo "failed $name"
+          done < fetch/urls.txt
+          ls -la fetch/out
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add fetch/out
+          git commit -m "Fetched assets" || echo "nothing to commit"
+          git push
