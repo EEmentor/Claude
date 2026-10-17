@@ -5,6 +5,7 @@ Reels are built in the workspace with the brand kit, Playwright, ffmpeg and an o
 ## Formats
 - 9:16 1080x1920, 30 fps, H.264 + AAC: Instagram Reel, Facebook Reel, YouTube Short.
 - 4:5 1080x1350 version of the same reel for the LinkedIn feed.
+- Encoding: H.264 High, yuv420p, 30 fps, keyframe every 2 s, CRF ~16, +faststart; audio AAC stereo 48 kHz (never higher, Instagram rejects it), 192 kbps. Check with ffprobe before publishing.
 - 18–30 seconds. Hook in the first 2 seconds. End card with the logo, a red button (e.g. "Get a quote") and the most specific energy.eementor.co URL.
 
 ## Brand rules (same as images)

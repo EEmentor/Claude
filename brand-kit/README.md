@@ -7,7 +7,7 @@ Follows the EEmentor Brand Guideline (rev. 01-06-2026).
 - Headlines: UPPERCASE, key words in red. Tight leading on big type.
 - Logo: ALWAYS `logo_energy.png` (the EEMENTOR ENERGY lock-up, full colour). It sits on a white header strip at the top of every image, with a red rule under the strip, because its dark blue letters need a white background. Never stretch, recolor, rotate, add effects or rearrange it.
 - Layout: white header strip with the logo, left-aligned; red kicker; headline; short body; red rectangular button; footer with Facebook / Instagram / LinkedIn icons | energy.eementor.co; gradient bar at the bottom.
-- Sizes: LinkedIn 1200x627, Facebook and Instagram 1080x1350.
+- Sizes: Instagram, Facebook and LinkedIn 1080x1350 (4:5); LinkedIn also 1200x627. Never 3:4 (1080x1440) for Instagram: its publishing API only accepts 4:5 to 1.91:1. Keep text and product 60+ px from the side edges (the profile grid trims ~34 px each side). Photo posts: template_photo_post.py.
 
 ## Make images
 1. Copy a template (`template_*.py`), edit the text and diagrams. Each page is an HTML file with `data-size="WxH"`.
