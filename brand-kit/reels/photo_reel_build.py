@@ -137,6 +137,6 @@ for i in range(len(lines)):
     fc += f'[{i+1}:a]aresample=48000,adelay={ms}|{ms}[a{i}];'; mix += f'[a{i}]'
 out = f'{HERE}/eementor-reel-{NAME}-1080x{H}.mp4'
 ff(['-i', f'{B}/silent.mp4'] + ins + ['-filter_complex', fc + mix + f'amix=inputs={len(lines)}:normalize=0,pan=stereo|c0=c0|c1=c0,loudnorm=I=-15:TP=-1.5[a]',
-    '-map', '0:v', '-map', '[a]', '-t', str(END), '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', out])
+    '-map', '0:v', '-map', '[a]', '-t', str(END), '-c:v', 'copy', '-c:a', 'aac', '-ar', '48000', '-b:a', '192k', '-movflags', '+faststart', out])
 json.dump({'durations': sd, 'starts': starts, 'end': END}, open(f'{B}/timing.json', 'w'))
 print(out, round(END, 2))
