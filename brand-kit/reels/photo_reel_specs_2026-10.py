@@ -40,3 +40,43 @@ REELS = {
    dict(img='connectors.jpg', k='Your choice', h='Your enclosure,<br><em>your connector</em>', s='PVC, ABS or steel · XT60, XT90, Anderson, EC5 and more', vo='Pick your enclosure. Pick your connector. Done.'),
   ]),
 }
+REELS.update({
+ 'cells': dict(
+  url='energy.eementor.co/collections/loose-cells', button='Shop cells',
+  end_kicker='Battery cells', end_h='Genuine cells,<br><em>traceable</em>',
+  end_chips=['18650', '21700', f'{kw("LiFePO4")} 32700', 'LiPo pouch'], end_img='cell_40pl.jpg',
+  end_vo='Want them loose, or built into a pack? Either way... link below!', note='Batch and date-code traceability',
+  scenes=[
+   dict(img='cell_p42a.jpg', k='Battery cells', h='Genuine cells.<br><em>Named makers.</em>', s='', vo="Ever wondered what's really inside a cheap battery? With us, you know exactly."),
+   dict(img='cell_40t.jpg', k='21700 cells', h='Samsung, Molicel,<br><em>EVE</em>', s='Samsung 40T · Molicel P42A · EVE 40PL', vo='Looking for twenty-one seven hundred cells? Samsung, Molicel, EVE.'),
+   dict(img='cell_vtc6.jpg', k='18650 cells', h='The <em>18650</em><br>classics', s='LG MJ1 · Murata VTC6 · Panasonic GA · Molicel P28A', vo='Prefer eighteen-six-fifty? L G, Murata, Panasonic, Molicel. Take your pick.'),
+   dict(img='cell_lfp32700.jpg', k=f'{kw("LiFePO4")} cells', h=f'<em>{kw("IFR32700")}</em><br>for storage', s='Lithium iron phosphate for long cycle life', vo='Building energy storage? Thirty-two seven hundred lithium iron phosphate cells.'),
+   dict(img='cell_lipo22000.jpg', k='LiPo pouch cells', h=f'Flat, up to<br><em>{kw("22,000 mAh")}</em>', s='3.7V pouch cells from 5,000 to 22,000 mAh', vo='Need it flat? LiPo pouch cells, all the way up to twenty-two thousand milliamp-hours.'),
+  ]),
+ 'process': dict(
+  url='energy.eementor.co/pages/custom-battery-packs', button='Send your brief',
+  end_kicker='Prototype first', end_h='Start with<br><em>one prototype</em>',
+  end_chips=['Start-ups', 'OEMs', 'Small volumes'], end_img='lfp_12v.jpg',
+  end_vo='Got a product in mind? Send us the brief. Link below!', note='No minimum order for prototypes',
+  scenes=[
+   dict(img='hero_pack.webp', k='Custom battery packs', h='How a custom pack<br><em>gets made</em>', s='', vo="So how does a custom battery actually get made? Let's walk through it."),
+   dict(img='li_exploded_52v.jpg', k='Step 1 · Your brief', h='It starts with<br><em>your application</em>', s='Voltage, capacity, peak current, size, BMS and connectors', vo='Step one. You tell us about your application. Voltage, current, size... the lot.'),
+   dict(img='li_open_52v.jpg', k='Step 2 · Engineering review', h='Engineers choose<br><em>the right cells</em>', s='Genuine cells from named makers', vo='Step two. Our engineers review it, and choose the right cells.'),
+   dict(img='li_pvc_52v.jpg', k='Step 3 · Prototype', h='<em>No minimum</em><br>order', s='Typically 25–30 days after the spec is agreed', vo='Step three. A working prototype. No minimum order, usually in twenty-five to thirty days.'),
+   dict(img='abs_52v.jpg', k='Step 4 · Validate', h='Test it in<br><em>your product</em>', s='Then a pilot run', vo='Step four. You test it in your own product. Then, a pilot run.'),
+   dict(img='li_steel_52v.jpg', k='Step 5 · Production', h='Scale up,<br><em>documented</em>', s='Typically around 30 days · test report with every shipment', vo='And step five? Production. Typically around thirty days, with a test report in every shipment.'),
+  ]),
+ 'ess': dict(
+  url='energy.eementor.co/pages/energy-storage', button='See the range',
+  end_kicker='Energy storage systems', end_h='From home<br>to <em>industrial</em>',
+  end_chips=['Home backup', 'Solar', 'Telecom', 'Off-grid'], end_img='ess_rack.webp',
+  end_vo='Home, business, or off-grid? Find your system. Link below!', ai=True,
+  scenes=[
+   dict(img='ess_cabinet.webp', k='Energy storage', h='Power that<br><em>stays on</em>', s='', vo="Power cut... again? Let's talk energy storage."),
+   dict(img='ess_aio.webp', k='All-in-one ESS', h=f'Battery +<br><em>{kw("5 kW")} inverter</em>', s='5–20 kWh LiFePO4 stack with MPPT solar input', vo='Want it all in one box? A five kilowatt inverter, solar input, and five to twenty kilowatt-hours of storage.'),
+   dict(img='ess_wall.webp', k='Wall-mounted', h='On the wall,<br><em>out of the way</em>', s='2.4 to 10.24 kWh units, up to 15 in parallel', vo='Short on floor space? Put it on the wall. Up to fifteen units in parallel.'),
+   dict(img='ess_rack.webp', k='Rack-mounted modules', h='Stack it<br><em>as you grow</em>', s='48V / 51.2V modules with an independent BMS in each', vo='Need more later? Stack rack modules. Each one has its own B M S.'),
+   dict(img='ess_cabinet.webp', k='Cabinet systems', h=f'Up to<br><em>{kw("230 kWh")}</em>', s='LV and HV cabinets for telecom, data centres and industry', vo='Running a business? Cabinet systems scale up to two hundred and thirty kilowatt-hours.'),
+   dict(img='ess_smart.webp', k='Drop-in batteries', h='Smaller jobs?<br><em>Drop-in</em>', s='12V and 24V, 6Ah to 300Ah, with Bluetooth and Wi-Fi models', vo='Smaller job? Drop-in twelve and twenty-four volt batteries, with Bluetooth on the smart models.'),
+  ]),
+})
