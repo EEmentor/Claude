@@ -17,7 +17,9 @@ White logo header strip with red rule on every frame (brand-kit/logo_energy.png,
 ## Voice-over
 - pip install --break-system-packages kokoro-onnx soundfile
 - Model files (GitHub releases): https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx and .../voices-v1.0.bin
-- Voice af_heart, speed 1.1, en-us. One line per scene; time scenes to the line lengths. Spell acronyms ("E S S", "M P P T"). Never speak the URL.
+- Voice am_puck (energetic male, chosen by Osama 17 Oct 2026), speed 1.15, en-us. One line per scene; time scenes to the lines. Spell acronyms ("B M S", "A B S"). Never speak the URL.
+- Write like a person talking, not a spec sheet: short punchy lines, questions to the viewer ("Need eleven volts? Twenty-two?"), "you" language, a light reaction ("Yes, really.", "Your call."), and end with a question ("So... what are you building?"). Facts stay exactly as on the website.
+- Photo reels: brand-kit/reels/photo_reel_build.py with a specs file like photo_reel_specs_2026-10.py.
 - Mix with adelay per line, amix, loudnorm I=-15.
 
 ## Facts
