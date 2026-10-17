@@ -31,7 +31,7 @@ if need:
     from kokoro_onnx import Kokoro
     k = Kokoro(f'{TTS}/kokoro-v1.0.onnx', f'{TTS}/voices-v1.0.bin')
     for i, t in enumerate(lines):
-        a, sr = k.create(t, voice='af_heart', speed=1.1, lang='en-us'); sf.write(f'{vo_dir}/{i}.wav', a, sr)
+        a, sr = k.create(t, voice='am_puck', speed=1.15, lang='en-us'); sf.write(f'{vo_dir}/{i}.wav', a, sr)
 import soundfile as sf
 for i in range(len(lines)):
     d = sf.info(f'{vo_dir}/{i}.wav'); durs.append(d.frames / d.samplerate)
