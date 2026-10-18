@@ -80,3 +80,44 @@ REELS.update({
    dict(img='ess_smart.webp', k='Drop-in batteries', h='Smaller jobs?<br><em>Drop-in</em>', s='12V and 24V, 6Ah to 300Ah, with Bluetooth and Wi-Fi models', vo='Smaller job? Drop-in twelve and twenty-four volt batteries, with Bluetooth on the smart models.'),
   ]),
 })
+REELS.update({
+ 'lfp': dict(
+  url='energy.eementor.co/pages/energy-storage', button='See the range',
+  end_kicker=f'{kw("LiFePO4")} energy storage', end_h='Built to <em>last</em>',
+  end_chips=['Home backup', 'Solar', 'Telecom', 'C&I'], end_img='ess_wall.webp',
+  end_vo="Planning storage for a home or a site? Let's size it together. Link below!", ai=True,
+  scenes=[
+   dict(img='ess_dropin.webp', k='Energy storage', h=f'Why <em>{kw("LiFePO4")}</em>?', s='', vo='Why do so many energy storage systems use lithium iron phosphate? Here is why.'),
+   dict(img='cell_lfp32700.jpg', k='The chemistry', h='Lithium iron<br><em>phosphate</em>', s='Less energy per kilo, but long cycle life and high thermal stability', vo='It stores a bit less energy per kilo than other lithium cells... but it lasts, and it stays stable.'),
+   dict(img='ess_rack.webp', k='Cycle life', h=f'<em>3,000+</em> cycles', s='Rack and cabinet modules: 3,000+ cycles at 80% and 5,000+ at 60% depth of discharge (25 °C, 0.5C)', vo='Our rack and cabinet modules are rated for over three thousand cycles at eighty percent depth of discharge.'),
+   dict(img='ess_wall.webp', k='Wall-mounted units', h='Built for<br><em>hot climates</em>', s='Operating range −20 to 60 °C · 5,000+ cycles at 80% DOD (25 °C)', vo='The wall units work from minus twenty up to sixty degrees. Hot summers? No problem.'),
+   dict(img='ess_cabinet.webp', k='Design life', h='<em>10 years</em><br>or more', s='Design life of 10+ years on wall and cabinet systems', vo='And they are designed to last ten years or more.'),
+   dict(img='ess_aio.webp', k='Certified', h=f'{kw("UL 1973")} ·<br><em>{kw("IEC 62619")}</em>', s='Plus UN38.3 on standard rack and wall models (per datasheet)', vo='Standard models are certified to U L nineteen seventy-three, and I E C sixty-two six nineteen.'),
+  ]),
+ 'quality': dict(
+  url='energy.eementor.co/pages/custom-battery-packs', button='Get a quote',
+  end_kicker='Custom battery packs', end_h='Quality you<br>can <em>trace</em>',
+  end_chips=['Genuine cells', 'Test reports', 'Traceability'], end_img='lfp_12v.jpg',
+  end_vo='Want a pack you can trust? Tell us what you need. Link below!',
+  scenes=[
+   dict(img='cell_40t.jpg', k='Quality', h='Where do your<br><em>cells</em> come from?', s='', vo='Where do the cells in your battery actually come from? You should know.'),
+   dict(img='cell_p42a.jpg', k='Genuine cells', h='Named makers<br><em>only</em>', s='Samsung · LG · Molicel · Murata · Panasonic · EVE', vo='We use genuine cells from named makers. Samsung, L G, Molicel, Murata, Panasonic, EVE.'),
+   dict(img='li_open_52v.jpg', k='Traceability', h='Batch and<br><em>date code</em>', s='Traceable on every shipment', vo='Every shipment is traceable, down to batch and date code.'),
+   dict(img='li_steel_52v.jpg', k='Tested', h='A test report<br><em>every time</em>', s='Every shipment is quality-checked and comes with a test report', vo='Every shipment is checked... and comes with a test report.'),
+   dict(img='li_pvc_52v.jpg', k='Standards', h=f'<em>{kw("UN 38.3")}</em> and<br><em>{kw("IEC 62133")}</em>', s='Standard models tested and CE marked · custom designs certified for your market', vo='Standard models are tested to U N thirty-eight point three and I E C sixty-two one thirty-three.'),
+   dict(img='abs_52v.jpg', k='Production', h=f'{kw("ISO 9001")}<br><em>production</em>', s='ISO 9001-certified manufacturing partner · up to 400,000 batteries a month', vo='Built with an I S O nine thousand one certified partner. Up to four hundred thousand batteries a month.'),
+  ]),
+ 'studio': dict(
+  url='energy.eementor.co/pages/battery-builder', button='Open the Studio',
+  end_kicker='Battery Design Studio', end_h='Start<br><em>designing</em>',
+  end_chips=['18650', '21700', 'LiPo', 'Up to 24S'], end_img='end_pack.png',
+  end_vo='So... what would you build? Try it. Link below!',
+  scenes=[
+   dict(img='ds_pack.png', k='Battery Design Studio', h='Design your pack<br><em>in 3D</em>', s='', vo='What if you could design your battery pack right in your browser? You can.'),
+   dict(img='ds_cells.png', k='Step 1 · Cells', h='Pick <em>real cells</em>', s='18650, 21700 or LiPo pouch from Samsung, LG, Molicel, Murata, EVE and more', vo='First, pick your cells. Eighteen-six-fifty, twenty-one seven hundred, or LiPo pouch.'),
+   dict(img='ds_config.png', k='Step 2 · Layout', h='Series <em>×</em><br>parallel', s='Set the layout, up to 24S', vo='Then set series and parallel. Up to twenty-four in series.'),
+   dict(img='ds_stats.png', k='Step 3 · Estimates', h='See the numbers<br><em>as you go</em>', s='Example 10S4P: 36 V, 14 Ah, 504 Wh (estimates from typical datasheet values)', vo='And watch voltage, capacity, energy and discharge update as you go.'),
+   dict(img='end_pack.png', k='Not sure where to start?', h='Describe it<br><em>in plain words</em>', s='For example: "24V robot, 6h at 15A"', vo='Not sure where to start? Just describe it. Like... twenty-four volt robot, six hours at fifteen amps.'),
+   dict(img='hero_pack.webp', k='Engineer review', h='We confirm<br><em>the final spec</em>', s='Our engineers review your design and reply with pricing and lead time', vo='Then our engineers review it, and reply with pricing and lead time.'),
+  ]),
+})
