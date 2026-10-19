@@ -121,3 +121,18 @@ REELS.update({
    dict(img='hero_pack.webp', k='Engineer review', h='We confirm<br><em>the final spec</em>', s='Our engineers review your design and reply with pricing and lead time', vo='Then our engineers review it, and reply with pricing and lead time.'),
   ]),
 })
+REELS.update({
+ 'fly': dict(
+  url='energy.eementor.co/pages/energy-storage', button='See the ESS',
+  end_kicker='All-in-one ESS', end_h='Not a flying car.<br><em>A very grounded battery.</em>',
+  end_chips=['Home backup', 'Solar', 'Off-grid'], end_img='aio_cut.png',
+  end_vo='Not a flying car. Just a very grounded battery. Link below!',
+  scenes=[
+   dict(img='fly_sky_lit.png', k='POV', h="Your neighbour's car<br><em>can fly now</em>", s='', vo="So... everyone's car can fly now."),
+   dict(img='fly_sky_dark.png', k='Meanwhile', h='Cool.<br><em>Power cut though.</em>', s='', vo='Cool. Cool cool cool. Except... the power just went out.'),
+   dict(img='aio_cut.png', k='All-in-one ESS', h="Ours doesn't fly.<br><em>It takes over.</em>", s='Battery and inverter in one system', vo="Ours doesn't fly. It just takes over."),
+   dict(img='aio_cut.png', k='Switch-over', h=f'<em>{kw("10 ms")}</em><br>switch-over', s='Typical switching time · faster than any mid-air flip', vo='Ten milliseconds to switch over. Faster than any mid-air flip.'),
+   dict(img='aio_cut.png', k='Inside', h=f'<em>{kw("5 kW")}</em> inverter +<br><em>{kw("5–20 kWh")}</em> {kw("LiFePO4")}', s='230 Vac pure sine wave · 10 kVA peak', vo='A five kilowatt inverter, and five to twenty kilowatt-hours of lithium iron phosphate.'),
+   dict(img='aio_cut.png', k='Fuel', h='No thrusters.<br><em>Just solar.</em>', s='MPPT solar input up to 5,200 W', vo='No thrusters. Just solar.'),
+  ]),
+})
