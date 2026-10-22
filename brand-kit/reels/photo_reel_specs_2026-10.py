@@ -158,7 +158,7 @@ REELS.update({
    dict(img='lipo_unwrapped.jpg', k='LiPo pouch cells', h='For very high<br><em>discharge current</em>', s='Pouch cells from 1,400 to 22,000 mAh', vo="Need big bursts of power? LiPo pouch cells handle very high discharge current."),
    dict(img='cell_p42a.jpg', k='18650 & 21700 cells', h='For longer<br><em>flight time</em>', s='Cells compared on capacity and weight', vo="Want longer flights? Cylindrical cells win on energy-to-weight."),
    dict(img='lipo_abs.jpg', k='Configuration', h=f'{kw("6S")}, {kw("12S")}<br><em>or what you need</em>', s='Series count matched to your motors and speed controllers', vo="Six S, twelve S? We match the series count to your motors and speed controllers."),
-   dict(img='connectors.jpg', k='Smart BMS', h='Talks to your<br><em>flight controller</em>', s='CAN, UART, SMBus or Bluetooth', vo="And the B M S can talk to your flight controller. CAN, UART, SMBus, or Bluetooth."),
+   dict(img='connectors.jpg', k='Connectors & leads', h='Your connector,<br><em>your leads</em>', s='Connectors, wire gauge, balance and communication leads customised', vo="Connectors, wire gauge, balance and communication leads? All built to your spec."),
    dict(img='lipo_pvc.jpg', k='NDAA', h='NDAA-compliant<br><em>configurations</em>', s='For qualifying projects · sourcing and origin reviewed', vo="Working on a defence program? N D A A compliant builds are available for qualifying projects."),
   ]),
  'climate': dict(url='energy.eementor.co/pages/energy-storage', button='See the range', end_kicker='Energy storage systems',
@@ -179,6 +179,6 @@ REELS.update({
    dict(img='li_open_52v.jpg', k='Peak current', h='Specified for<br><em>the peaks</em>', s='Cells, interconnects and BMS rated for continuous and peak discharge', vo="Accelerating, lifting, climbing ramps... the cells, interconnects and B M S are specified for the peaks."),
    dict(img='cell_lfp32700.jpg', k='Chemistry', h=f'{kw("LiFePO4")} or<br><em>Li-ion?</em>', s='LiFePO4 for long cycle life · Li-ion for energy density', vo="Long cycle life? LiFePO4. More energy in less space? Lithium-ion."),
    dict(img='li_pvc_52v.jpg', k='Charging', h='Topped up<br><em>between tasks</em>', s='Charge current and cells matched to frequent partial charging', vo="Charging between tasks? We match the cells and charge current to frequent partial charging."),
-   dict(img='ds_config.png', k='Communication', h='Talks to your<br><em>controller</em>', s='CAN, RS485, UART or SMBus: state of charge and status', vo="And the B M S tells your controller its state of charge. CAN, RS485, UART, or SMBus."),
+   dict(img='li_exploded_52v.jpg', k='Communication', h='Talks to your<br><em>controller</em>', s='CAN, RS485, UART or SMBus: state of charge and status', vo="And the B M S tells your controller its state of charge. CAN, RS485, UART, or SMBus."),
   ]),
 })
