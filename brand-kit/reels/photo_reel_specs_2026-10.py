@@ -182,3 +182,63 @@ REELS.update({
    dict(img='li_exploded_52v.jpg', k='Communication', h='Talks to your<br><em>controller</em>', s='CAN, RS485, UART or SMBus: state of charge and status', vo="And the B M S tells your controller its state of charge. CAN, RS485, UART, or SMBus."),
   ]),
 })
+
+# v4 dialogue voice-over test (host = af_heart asks, expert = am_puck answers)
+H_ = lambda t, s=1.12: ('af_heart', t, s)
+E_ = lambda t, s=1.2: ('am_puck', t, s)
+_c = dict(REELS['climate'])
+_c['scenes'] = [dict(x) for x in REELS['climate']['scenes']]
+_vo = [
+  [H_("Okay, real question."), H_("Minus twenty outside... does your battery even care?"), E_("Oh, it cares. A lot.")],
+  [H_("Wait, seriously?"), E_("Every battery has two windows. One for charging, one for discharging."), E_("And they are not the same!")],
+  [E_("Our rack and cabinet modules charge from zero to forty-five degrees."), H_("And discharge?"), E_("Minus ten, all the way to fifty.")],
+  [H_("So... Nordic winter. What do I pick?"), E_("The wall-mounted powerwall. Minus twenty to sixty.")],
+  [H_("And a rooftop in a Gulf summer?"), E_("The all-in-one. Minus fifteen to fifty-five ambient.")],
+]
+for sc, v in zip(_c['scenes'], _vo): sc['vo'] = v
+_c['end_vo'] = [H_("Garage, rooftop, or basement?"), E_("Tell us where yours goes. Drop it in the comments!")]
+_c['note'] = 'Garage, rooftop or basement? Tell us in the comments'
+REELS['climate2'] = _c
+
+def _dlg(base, vos, end_vo, note):
+    c = dict(REELS[base]); c['scenes'] = [dict(x) for x in REELS[base]['scenes']]
+    for sc, v in zip(c['scenes'], vos): sc['vo'] = v
+    c['end_vo'] = end_vo; c['note'] = note; return c
+
+REELS['cells2'] = _dlg('cells', [
+  [H_("Be honest."), H_("Do you actually know what's inside your battery?"), E_("Most people don't. With us, you do.")],
+  [H_("Okay, twenty-one seven hundred cells?"), E_("Samsung. Molicel. EVE. Named makers, genuine cells.")],
+  [H_("And if I'm team eighteen-six-fifty?"), E_("L G, Murata, Panasonic, Molicel."), H_("Nice.")],
+  [H_("What about energy storage?"), E_("Thirty-two seven hundred lithium iron phosphate. Built for long cycle life.")],
+  [H_("And if it has to be flat?"), E_("LiPo pouch cells. Up to twenty-two thousand milliamp-hours!"), H_("Wow.")],
+], [H_("So... which cell is in your next build?"), E_("Tell us in the comments. Loose, or built into a pack.")],
+  'Which cell is in your next build? Tell us in the comments')
+
+REELS['process2'] = _dlg('process', [
+  [H_("So, how does a custom battery actually get made?"), E_("Five steps. Let's go.")],
+  [E_("Step one: your brief."), H_("Like what?"), E_("Voltage, current, size, connectors. The lot.")],
+  [E_("Step two: our engineers review it, and pick the right cells.")],
+  [H_("And then I wait months?"), E_("Nope. A prototype, no minimum order, usually in twenty-five to thirty days.")],
+  [E_("Step four: you test it in your own product."), H_("Then?"), E_("A pilot run.")],
+  [E_("Step five: production. Around thirty days..."), E_("with a test report in every shipment.")],
+], [H_("What would you build with just one prototype?"), E_("Tell us below. We read every one.")],
+  'What would you prototype first? Tell us in the comments')
+
+REELS['robots2'] = _dlg('robots', [
+  [H_("Your robot works all shift."), H_("Does its battery keep up?"), E_("Let's find out.")],
+  [E_("Accelerating, lifting, climbing ramps..."), E_("the cells, interconnects and B M S are specified for those peaks.")],
+  [H_("Okay, LiFePO4 or lithium-ion?"), E_("Long cycle life? LiFePO4. More energy in less space? Lithium-ion.")],
+  [H_("What about quick top-ups between tasks?"), E_("We match the cells and charge current to frequent partial charging.")],
+  [H_("And does it talk to the robot?"), E_("Yep. State of charge over CAN, RS485, UART or SMBus.")],
+], [H_("LiFePO4 or lithium-ion for your fleet?"), E_("Vote in the comments!")],
+  'LiFePO4 or Li-ion for your robot? Vote in the comments')
+
+REELS['ess2'] = _dlg('ess', [
+  [H_("Power cut... again?"), E_("Okay. Let's fix that.")],
+  [H_("I want everything in one box."), E_("All-in-one. Five kilowatt inverter, solar input, five to twenty kilowatt-hours.")],
+  [H_("No floor space, though."), E_("Then put it on the wall. Up to fifteen units in parallel.")],
+  [H_("And if I need more later?"), E_("Stack rack modules. Each one has its own B M S.")],
+  [H_("What about a whole business?"), E_("Cabinet systems. LV and HV, for telecom, data centres and industry.")],
+  [H_("Something smaller?"), E_("Drop-in twelve and twenty-four volt batteries. Bluetooth on the smart models.")],
+], [H_("Home, business, or off-grid. Which one are you?"), E_("Tell us below!")],
+  'Home, business or off-grid? Tell us in the comments')
