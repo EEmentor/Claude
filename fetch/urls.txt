@@ -5,3 +5,11 @@ app_emobility.jpg https://energy.eementor.co/cdn/shop/files/ee-app-emobility.jpg
 app_marine.jpg https://energy.eementor.co/cdn/shop/files/ee-app-marine.jpg?v=1792103144&width=2000
 app_security.jpg https://energy.eementor.co/cdn/shop/files/ee-app-security.jpg?v=1792103174&width=2000
 app_powertools.jpg https://energy.eementor.co/cdn/shop/files/ee-app-powertools.jpg?v=1792103118&width=2000
+app_iot.jpg https://energy.eementor.co/cdn/shop/files/ee-app-iot.jpg?width=1400
+app_rov.jpg https://energy.eementor.co/cdn/shop/files/ee-app-rov.jpg?width=1400
+app_wheelchair.jpg https://energy.eementor.co/cdn/shop/files/ee-app-wheelchair.jpg?width=1400
+app_forklift.jpg https://energy.eementor.co/cdn/shop/files/ee-app-forklift.jpg?width=1400
+app_cleaning.jpg https://energy.eementor.co/cdn/shop/files/ee-app-cleaning.jpg?width=1400
+app_garden.jpg https://energy.eementor.co/cdn/shop/files/ee-app-garden.jpg?width=1400
+app_streetlight.jpg https://energy.eementor.co/cdn/shop/files/ee-app-streetlight.jpg?width=1400
+app_golf.jpg https://energy.eementor.co/cdn/shop/files/ee-app-golf.jpg?width=1400
