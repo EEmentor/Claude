@@ -13,3 +13,8 @@ app_cleaning.jpg https://energy.eementor.co/cdn/shop/files/ee-app-cleaning.jpg?w
 app_garden.jpg https://energy.eementor.co/cdn/shop/files/ee-app-garden.jpg?width=1400
 app_streetlight.jpg https://energy.eementor.co/cdn/shop/files/ee-app-streetlight.jpg?width=1400
 app_golf.jpg https://energy.eementor.co/cdn/shop/files/ee-app-golf.jpg?width=1400
+page_electric-skateboard.html https://energy.eementor.co/pages/electric-skateboard-batteries
+page_portable-instrument.html https://energy.eementor.co/pages/portable-instrument-batteries
+page_electric-motorcycle.html https://energy.eementor.co/pages/electric-motorcycle-batteries
+page_medical-device.html https://energy.eementor.co/pages/medical-device-batteries
+page_drone-uav.html https://energy.eementor.co/pages/drone-uav-batteries
