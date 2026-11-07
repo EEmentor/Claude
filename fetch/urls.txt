@@ -18,3 +18,6 @@ page_portable-instrument.html https://energy.eementor.co/pages/portable-instrume
 page_electric-motorcycle.html https://energy.eementor.co/pages/electric-motorcycle-batteries
 page_medical-device.html https://energy.eementor.co/pages/medical-device-batteries
 page_drone-uav.html https://energy.eementor.co/pages/drone-uav-batteries
+app_eskate.jpg https://energy.eementor.co/cdn/shop/files/ee-app-eskate.jpg?width=1400
+app_handheld.jpg https://energy.eementor.co/cdn/shop/files/ee-app-handheld.jpg?width=1400
+app_motorcycle.jpg https://energy.eementor.co/cdn/shop/files/ee-app-motorcycle.jpg?width=1400
