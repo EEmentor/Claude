@@ -21,3 +21,4 @@ page_drone-uav.html https://energy.eementor.co/pages/drone-uav-batteries
 app_eskate.jpg https://energy.eementor.co/cdn/shop/files/ee-app-eskate.jpg?width=1400
 app_handheld.jpg https://energy.eementor.co/cdn/shop/files/ee-app-handheld.jpg?width=1400
 app_motorcycle.jpg https://energy.eementor.co/cdn/shop/files/ee-app-motorcycle.jpg?width=1400
+page_custom-battery-packs.html https://energy.eementor.co/pages/custom-battery-packs
