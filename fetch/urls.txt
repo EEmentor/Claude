@@ -22,3 +22,9 @@ app_eskate.jpg https://energy.eementor.co/cdn/shop/files/ee-app-eskate.jpg?width
 app_handheld.jpg https://energy.eementor.co/cdn/shop/files/ee-app-handheld.jpg?width=1400
 app_motorcycle.jpg https://energy.eementor.co/cdn/shop/files/ee-app-motorcycle.jpg?width=1400
 page_custom-battery-packs.html https://energy.eementor.co/pages/custom-battery-packs
+page_marine-batteries.html https://energy.eementor.co/pages/marine-batteries
+page_industrial-iot-batteries.html https://energy.eementor.co/pages/industrial-iot-batteries
+page_security-camera-batteries.html https://energy.eementor.co/pages/security-camera-batteries
+page_solar-street-light-batteries.html https://energy.eementor.co/pages/solar-street-light-batteries
+page_energy-storage.html https://energy.eementor.co/pages/energy-storage
+page_underwater-vehicle-batteries.html https://energy.eementor.co/pages/underwater-vehicle-batteries
