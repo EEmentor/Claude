@@ -28,3 +28,11 @@ page_security-camera-batteries.html https://energy.eementor.co/pages/security-ca
 page_solar-street-light-batteries.html https://energy.eementor.co/pages/solar-street-light-batteries
 page_energy-storage.html https://energy.eementor.co/pages/energy-storage
 page_underwater-vehicle-batteries.html https://energy.eementor.co/pages/underwater-vehicle-batteries
+page_amr-agv-batteries.html https://energy.eementor.co/pages/amr-agv-batteries
+page_cleaning-machine-batteries.html https://energy.eementor.co/pages/cleaning-machine-batteries
+page_e-bike-e-scooter-batteries.html https://energy.eementor.co/pages/e-bike-e-scooter-batteries
+page_forklift-batteries.html https://energy.eementor.co/pages/forklift-batteries
+page_garden-equipment-batteries.html https://energy.eementor.co/pages/garden-equipment-batteries
+page_golf-cart-batteries.html https://energy.eementor.co/pages/golf-cart-batteries
+page_power-tool-batteries.html https://energy.eementor.co/pages/power-tool-batteries
+page_wheelchair-mobility-scooter-batteries.html https://energy.eementor.co/pages/wheelchair-mobility-scooter-batteries
