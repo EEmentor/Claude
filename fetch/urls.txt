@@ -36,3 +36,4 @@ page_garden-equipment-batteries.html https://energy.eementor.co/pages/garden-equ
 page_golf-cart-batteries.html https://energy.eementor.co/pages/golf-cart-batteries
 page_power-tool-batteries.html https://energy.eementor.co/pages/power-tool-batteries
 page_wheelchair-mobility-scooter-batteries.html https://energy.eementor.co/pages/wheelchair-mobility-scooter-batteries
+page_safety-article.html https://energy.eementor.co/blogs/news/lithium-battery-safety-storage-charging-handling
