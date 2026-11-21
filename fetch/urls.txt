@@ -39,3 +39,4 @@ page_wheelchair-mobility-scooter-batteries.html https://energy.eementor.co/pages
 page_safety-article.html https://energy.eementor.co/blogs/news/lithium-battery-safety-storage-charging-handling
 page_art_12s-lipo-battery-44-4v-drone-packs.html https://energy.eementor.co/blogs/news/12s-lipo-battery-44-4v-drone-packs
 page_art_amr-battery-sizing-full-shift-runtime.html https://energy.eementor.co/blogs/news/amr-battery-sizing-full-shift-runtime
+page_art_order-docs.html https://energy.eementor.co/blogs/news/what-to-expect-when-you-order-documents-warranty-portal
