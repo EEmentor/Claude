@@ -37,3 +37,5 @@ page_golf-cart-batteries.html https://energy.eementor.co/pages/golf-cart-batteri
 page_power-tool-batteries.html https://energy.eementor.co/pages/power-tool-batteries
 page_wheelchair-mobility-scooter-batteries.html https://energy.eementor.co/pages/wheelchair-mobility-scooter-batteries
 page_safety-article.html https://energy.eementor.co/blogs/news/lithium-battery-safety-storage-charging-handling
+page_art_12s-lipo-battery-44-4v-drone-packs.html https://energy.eementor.co/blogs/news/12s-lipo-battery-44-4v-drone-packs
+page_art_amr-battery-sizing-full-shift-runtime.html https://energy.eementor.co/blogs/news/amr-battery-sizing-full-shift-runtime
