@@ -1,0 +1,54 @@
+name: elevenlabs-tts
+# Generates voice-over lines with ElevenLabs.
+# Needs the repository secret ELEVENLABS_API_KEY (Settings > Secrets and variables > Actions).
+# Input:  tts/requests/<name>.json  {"voice_id": "...", "model_id": "...", "settings": {...},
+#                                    "lines": [{"id": "s1", "text": "..."}]}
+# Output: tts/out/<name>/<id>.mp3 (lines that already exist are skipped)
+on:
+  push:
+    paths: ['tts/requests/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: tts
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          if [ -z "$ELEVENLABS_API_KEY" ]; then echo "ELEVENLABS_API_KEY secret is missing"; exit 1; fi
+          python3 - <<'EOF'
+          import json, os, glob, urllib.request
+          key = os.environ['ELEVENLABS_API_KEY']
+          for req in sorted(glob.glob('tts/requests/*.json')):
+              name = os.path.splitext(os.path.basename(req))[0]
+              r = json.load(open(req))
+              out = f'tts/out/{name}'; os.makedirs(out, exist_ok=True)
+              for line in r['lines']:
+                  path = f"{out}/{line['id']}.mp3"
+                  if os.path.exists(path): continue
+                  body = {'text': line['text'], 'model_id': r.get('model_id', 'eleven_multilingual_v2'),
+                          'voice_settings': r.get('settings', {})}
+                  if line.get('previous_text'): body['previous_text'] = line['previous_text']
+                  if line.get('next_text'): body['next_text'] = line['next_text']
+                  q = urllib.request.Request(
+                      f"https://api.elevenlabs.io/v1/text-to-speech/{r['voice_id']}?output_format=mp3_44100_128",
+                      data=json.dumps(body).encode(), method='POST',
+                      headers={'xi-api-key': key, 'Content-Type': 'application/json', 'Accept': 'audio/mpeg'})
+                  try:
+                      with urllib.request.urlopen(q, timeout=120) as resp: open(path, 'wb').write(resp.read())
+                      print('ok', path)
+                  except urllib.error.HTTPError as e:
+                      print('FAILED', path, e.code, e.read()[:300])
+          EOF
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add tts/out
+          git commit -m "TTS audio" || echo "nothing to commit"
+          git pull --rebase -q && git push
