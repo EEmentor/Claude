@@ -15,16 +15,14 @@ White logo header strip with red rule on every frame (brand-kit/logo_energy.png,
 1. Animated brand explainer (example_animated_gen.py + render_frames.py): scenes are HTML/SVG with CSS keyframe animations; render_frames.py pauses all animations and screenshots each frame at 30 fps (deterministic), then ffmpeg encodes. Good for specs, comparisons, how-it-works.
 2. Real product photo reel (example_photo_reel_build.py): the real product photo (fetched via fetch/urls.txt) on brand backgrounds with slow camera moves (scale/pan), captions and spec chips per scene, end card. Never let AI redraw a product.
 
-## Voice-over (dialogue standard, set by Osama 30 Oct 2026)
-Single-narrator voice-overs sounded like someone reading a script, so every reel is now a short two-voice conversation with music.
-- pip install --break-system-packages kokoro-onnx soundfile
-- Model files (GitHub releases): https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx and .../voices-v1.0.bin
-- Builder: brand-kit/reels/build2.py (photo reels). In the specs file each scene's `vo` is a list of (voice, text, speed) lines; helpers `H_(text)` = host af_heart at 1.12 and `E_(text)` = expert am_puck at 1.2, and `_dlg(...)` (see photo_reel_specs_2026-10.py, REELS climate2/cells2/process2/robots2/ess2).
-- Host asks or reacts, expert answers. Lines of 2–8 words, questions to the viewer, "you" language, quick reactions ("Wait, really?", "Nice."). 1–3 lines per scene; the scene lasts as long as its lines (min 2.2 s).
-- End with a comment question (e.g. "LiFePO4 or Li-ion for your robot? Vote in the comments."). Use the same question as the end-card note and as a paragraph in every caption, just before the CTA.
-- Music bed: brand-kit/reels/music_bed.wav (synthesised by music.py, 112 BPM, royalty-free), looped, ducked under the voices (sidechaincompress), faded out over the last 1.2 s; whoosh.wav on every cut. Final loudnorm I=-14.
-- Spell acronyms ("B M S"). Never speak the URL. Facts stay exactly as on the website.
-- File names: eementor-reel-<name>-v4-1080x<H>.mp4 (new names each time, Metricool copies media at scheduling).
+## Voice-over (standard since 27 Nov 2026, chosen by Osama)
+One narrator: the ElevenLabs voice "Will" (voice_id bIHbv24MWmeRgasZH58o, model eleven_v3, stability 0.5, similarity 0.75), energetic, natural American delivery. The Kokoro two-voice dialogue (30 Oct to 27 Nov) is retired: Osama found it robotic, cheesy and badly paced.
+- Script: one or two short, punchy sentences per scene in "you" language; questions and quick reactions are fine; v3 audio tags such as [excited], [laughs], [gasps] where they fit. End with a comment question that is also the end-card note and a caption paragraph before the CTA.
+- Generate: commit tts/requests/will_<reel>.json ({"voice_id","model_id","settings","lines":[{"id":"s1","text":...},...,{"id":"end",...}]}). The GitHub Action "elevenlabs-tts" (.github/workflows/tts.yml) reads the ELEVENLABS_API_KEY repository secret (the workspace itself cannot reach ElevenLabs) and commits tts/out/will_<reel>/<id>.mp3; existing files are skipped.
+- Build: in the specs set each scene's vo to [('file', '/home/claude/claude/tts/out/will_<reel>/sN.mp3', 1.0)] and end_vo to [('file', '.../end.mp3', 1.0)]; build2.py treats voice 'file' as a recorded line. Music bed ducked under the voice, whoosh on cuts, loudnorm I=-14.
+- Spell acronyms in the script ("B M S"). Never speak the URL. Facts stay exactly as on the website.
+- File names: eementor-reel-<name>-v5-1080x<H>.mp4 (new names each time, Metricool copies media at scheduling).
+- Free fallback (not chosen): Chatterbox open-source TTS via .github/workflows/chatterbox.yml.
 
 ## Facts
 Only facts on energy.eementor.co (product pages, articles). No invented specs, certifications, results or customers. Mock UI numbers must not be presented as real data.

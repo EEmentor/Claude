@@ -30,6 +30,10 @@ def tts(voice, text, speed):
     global _k
     key = hashlib.md5(f'{voice}|{speed}|{text}'.encode()).hexdigest()[:12]
     p = f'{vo_dir}/seg_{key}.wav'
+    if voice == 'file':   # pre-recorded line (e.g. ElevenLabs mp3 from tts/out/)
+        if not os.path.exists(p):
+            subprocess.run(['ffmpeg','-v','error','-y','-i',text,'-ac','1','-ar','44100',p], check=True)
+        a, sr = sf.read(p); return a, sr
     if not os.path.exists(p):
         if _k is None:
             from kokoro_onnx import Kokoro
@@ -43,7 +47,7 @@ for i, t in enumerate(lines):
         a, sr = tts(voice, text, speed)
         # trim leading/trailing silence for snappier turn-taking
         nz = np.where(np.abs(a) > 0.01)[0]
-        if len(nz): a = a[max(0, nz[0]-int(.03*sr)): nz[-1]+int(.06*sr)]
+        if len(nz): a = a[max(0, nz[0]-int(.03*sr)): nz[-1]+int((.12 if voice=='file' else .06)*sr)]
         parts.append(a)
         if j < len(segs)-1: parts.append(np.zeros(int(.14*sr)))
     sf.write(f'{vo_dir}/{i}.wav', np.concatenate(parts), sr)
