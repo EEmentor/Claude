@@ -1,0 +1,49 @@
+name: chatterbox-tts
+# Free, open-source voice-over (Resemble AI Chatterbox, MIT licence), run on the GitHub runner.
+# Input:  tts/cb_requests/<name>.json {"exaggeration":0.5,"cfg_weight":0.5,"voice":"<optional ref wav in tts/voices>",
+#                                      "lines":[{"id":"s1","text":"..."}]}
+# Output: tts/cb_out/<name>/<id>.wav (existing lines are skipped)
+on:
+  push:
+    paths: ['tts/cb_requests/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: chatterbox
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Install
+        run: |
+          pip install --quiet torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet chatterbox-tts
+      - name: Generate
+        run: |
+          python3 - <<'EOF'
+          import json, os, glob, torch, torchaudio
+          from chatterbox.tts import ChatterboxTTS
+          model = ChatterboxTTS.from_pretrained(device='cpu')
+          for req in sorted(glob.glob('tts/cb_requests/*.json')):
+              name = os.path.splitext(os.path.basename(req))[0]
+              r = json.load(open(req)); out = f'tts/cb_out/{name}'; os.makedirs(out, exist_ok=True)
+              ref = r.get('voice'); ref = f'tts/voices/{ref}' if ref else None
+              for line in r['lines']:
+                  path = f"{out}/{line['id']}.wav"
+                  if os.path.exists(path): continue
+                  kw = dict(exaggeration=r.get('exaggeration', 0.5), cfg_weight=r.get('cfg_weight', 0.5))
+                  if ref: kw['audio_prompt_path'] = ref
+                  wav = model.generate(line['text'], **kw)
+                  torchaudio.save(path, wav, model.sr); print('ok', path, flush=True)
+          EOF
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add tts/cb_out
+          git commit -m "Chatterbox audio" || echo "nothing to commit"
+          git pull --rebase -q && git push

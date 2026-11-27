@@ -1,0 +1,30 @@
+{
+ "exaggeration": 0.5,
+ "cfg_weight": 0.5,
+ "lines": [
+  {
+   "id": "s1",
+   "text": "Power cut, and the Wi-Fi goes down with it?"
+  },
+  {
+   "id": "s2",
+   "text": "Plug your router into one of these, and it keeps running."
+  },
+  {
+   "id": "s3",
+   "text": "You get twelve and nine volt outputs, plus five volt USB."
+  },
+  {
+   "id": "s4",
+   "text": "That's enough for a router, a modem, an IP camera, or LED lights."
+  },
+  {
+   "id": "s5",
+   "text": "Models run from about sixty to eighty watt-hours, and the slim ones weigh around four hundred grams."
+  },
+  {
+   "id": "s6",
+   "text": "So, what would you keep running? Tell us in the comments."
+  }
+ ]
+}
