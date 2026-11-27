@@ -1,0 +1,46 @@
+{
+ "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+ "model_id": "eleven_multilingual_v2",
+ "settings": {
+  "stability": 0.45,
+  "similarity_boost": 0.75,
+  "style": 0.25,
+  "use_speaker_boost": true
+ },
+ "lines": [
+  {
+   "id": "s1",
+   "text": "Power cut, and the Wi-Fi goes down with it?",
+   "next_text": "Plug your router into one of these, and it keeps running."
+  },
+  {
+   "id": "s2",
+   "text": "Plug your router into one of these, and it keeps running.",
+   "previous_text": "Power cut, and the Wi-Fi goes down with it?",
+   "next_text": "You get twelve and nine volt outputs, plus five volt USB."
+  },
+  {
+   "id": "s3",
+   "text": "You get twelve and nine volt outputs, plus five volt USB.",
+   "previous_text": "Plug your router into one of these, and it keeps running.",
+   "next_text": "That's enough for a router, a modem, an IP camera, or LED lights."
+  },
+  {
+   "id": "s4",
+   "text": "That's enough for a router, a modem, an IP camera, or LED lights.",
+   "previous_text": "You get twelve and nine volt outputs, plus five volt USB.",
+   "next_text": "Models run from about sixty to eighty watt-hours, and the slim ones weigh around four hundred grams."
+  },
+  {
+   "id": "s5",
+   "text": "Models run from about sixty to eighty watt-hours, and the slim ones weigh around four hundred grams.",
+   "previous_text": "That's enough for a router, a modem, an IP camera, or LED lights.",
+   "next_text": "So, what would you keep running? Tell us in the comments."
+  },
+  {
+   "id": "s6",
+   "text": "So, what would you keep running? Tell us in the comments.",
+   "previous_text": "Models run from about sixty to eighty watt-hours, and the slim ones weigh around four hundred grams."
+  }
+ ]
+}
