@@ -1,0 +1,30 @@
+{
+ "voice_id": "bIHbv24MWmeRgasZH58o",
+ "model_id": "eleven_v3",
+ "settings": {
+  "stability": 0.5,
+  "similarity_boost": 0.75
+ },
+ "lines": [
+  {
+   "id": "s1",
+   "text": "[excited] Aww, look at the baby! A compact six point four volt battery."
+  },
+  {
+   "id": "s2",
+   "text": "And here comes mom. Fifty-one point two volts, and she's smart."
+  },
+  {
+   "id": "s3",
+   "text": "Wait... [gasps] the dad???"
+  },
+  {
+   "id": "s4",
+   "text": "That's the cabinet system. He keeps whole businesses running!"
+  },
+  {
+   "id": "end",
+   "text": "[laughs] The baby, the mom, or the dad... which one's yours? Tell us in the comments!"
+  }
+ ]
+}

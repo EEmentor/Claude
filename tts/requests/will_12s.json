@@ -1,0 +1,34 @@
+{
+ "voice_id": "bIHbv24MWmeRgasZH58o",
+ "model_id": "eleven_v3",
+ "settings": {
+  "stability": 0.5,
+  "similarity_boost": 0.75
+ },
+ "lines": [
+  {
+   "id": "s1",
+   "text": "[excited] Why do heavy-lift drones go twelve S? Half the current, same power!"
+  },
+  {
+   "id": "s2",
+   "text": "Twelve LiPo cells in series. Forty-four point four volts nominal."
+  },
+  {
+   "id": "s3",
+   "text": "Three kilowatts at six S? About a hundred and thirty-five amps. At twelve S? Around sixty-eight."
+  },
+  {
+   "id": "s4",
+   "text": "Less current means less heat in your cables and connectors, and lighter wiring."
+  },
+  {
+   "id": "s5",
+   "text": "Pro tip: size your pack from the stated amps, not the C number."
+  },
+  {
+   "id": "end",
+   "text": "[excited] Six S or twelve S... what does your drone run? Tell us in the comments!"
+  }
+ ]
+}
