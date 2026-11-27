@@ -1,0 +1,36 @@
+{
+ "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
+ "model_id": "eleven_multilingual_v2",
+ "settings": {
+  "stability": 0.3,
+  "similarity_boost": 0.75,
+  "style": 0.6,
+  "use_speaker_boost": true
+ },
+ "lines": [
+  {
+   "id": "s1",
+   "text": "Power cut... and your Wi-Fi's gone? Not anymore!"
+  },
+  {
+   "id": "s2",
+   "text": "Plug your router into one of these, and boom, you're still online."
+  },
+  {
+   "id": "s3",
+   "text": "You get twelve and nine volt outputs, plus five volt USB!"
+  },
+  {
+   "id": "s4",
+   "text": "Routers, modems, IP cameras, LED lights... all covered."
+  },
+  {
+   "id": "s5",
+   "text": "Sixty to eighty watt-hours, and the slim ones? Just four hundred grams."
+  },
+  {
+   "id": "s6",
+   "text": "So what would YOU keep running? Drop it in the comments!"
+  }
+ ]
+}
