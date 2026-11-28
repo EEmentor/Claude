@@ -1,0 +1,34 @@
+{
+ "voice_id": "bIHbv24MWmeRgasZH58o",
+ "model_id": "eleven_v3",
+ "settings": {
+  "stability": 0.5,
+  "similarity_boost": 0.75
+ },
+ "lines": [
+  {
+   "id": "s1",
+   "text": "[excited] What if you could just... type your battery? And see it in 3D?"
+  },
+  {
+   "id": "s2",
+   "text": "Type something like: forty-eight volt e-bike, twenty amp-hours."
+  },
+  {
+   "id": "s3",
+   "text": "Or a runtime. Twenty-four volt robot, six hours at fifteen amps."
+  },
+  {
+   "id": "s4",
+   "text": "The Studio shows the voltage, capacity, energy, and the approximate size."
+  },
+  {
+   "id": "s5",
+   "text": "Happy with it? Send it over. Our engineers check the BMS, current and enclosure."
+  },
+  {
+   "id": "end",
+   "text": "[excited] So what would YOU type first? Tell us in the comments!"
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "voice_id": "bIHbv24MWmeRgasZH58o",
+ "model_id": "eleven_v3",
+ "settings": {
+  "stability": 0.5,
+  "similarity_boost": 0.75
+ },
+ "lines": [
+  {
+   "id": "s1",
+   "text": "[excited] Still running lead-acid? Same slot... totally different battery!"
+  },
+  {
+   "id": "s2",
+   "text": "LiFePO4 weighs about a third as much."
+  },
+  {
+   "id": "s3",
+   "text": "And it lasts up to four times as many cycles."
+  },
+  {
+   "id": "s4",
+   "text": "Plus, you can use all of the capacity. The built-in BMS protects it."
+  },
+  {
+   "id": "s5",
+   "text": "Six to three hundred amp-hours, twelve or twenty-four volts. Series or parallel."
+  },
+  {
+   "id": "end",
+   "text": "[excited] So what's still running on lead-acid at your place? Tell us in the comments!"
+  }
+ ]
+}

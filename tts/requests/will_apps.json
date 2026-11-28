@@ -1,0 +1,34 @@
+{
+ "voice_id": "bIHbv24MWmeRgasZH58o",
+ "model_id": "eleven_v3",
+ "settings": {
+  "stability": 0.5,
+  "similarity_boost": 0.75
+ },
+ "lines": [
+  {
+   "id": "s1",
+   "text": "[excited] One battery team. Nineteen very different jobs. Ready?"
+  },
+  {
+   "id": "s2",
+   "text": "Drones need light packs with serious current."
+  },
+  {
+   "id": "s3",
+   "text": "Medical equipment needs stable, dependable power."
+  },
+  {
+   "id": "s4",
+   "text": "Underwater vehicles? Cells arranged to fit the pressure housing."
+  },
+  {
+   "id": "s5",
+   "text": "And warehouse robots? High-cycle packs, running around the clock."
+  },
+  {
+   "id": "end",
+   "text": "[excited] So which one is YOUR application? Tell us in the comments!"
+  }
+ ]
+}
