@@ -40,3 +40,6 @@ page_safety-article.html https://energy.eementor.co/blogs/news/lithium-battery-s
 page_art_12s-lipo-battery-44-4v-drone-packs.html https://energy.eementor.co/blogs/news/12s-lipo-battery-44-4v-drone-packs
 page_art_amr-battery-sizing-full-shift-runtime.html https://energy.eementor.co/blogs/news/amr-battery-sizing-full-shift-runtime
 page_art_order-docs.html https://energy.eementor.co/blogs/news/what-to-expect-when-you-order-documents-warranty-portal
+page_surveillance-trailer-batteries.html https://energy.eementor.co/pages/surveillance-trailer-batteries
+page_battery-design-studio.html https://energy.eementor.co/pages/battery-design-studio
+page_deep-cycle-batteries.html https://energy.eementor.co/pages/deep-cycle-batteries
