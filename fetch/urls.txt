@@ -43,3 +43,4 @@ page_art_order-docs.html https://energy.eementor.co/blogs/news/what-to-expect-wh
 page_surveillance-trailer-batteries.html https://energy.eementor.co/pages/surveillance-trailer-batteries
 page_battery-design-studio.html https://energy.eementor.co/pages/battery-design-studio
 page_deep-cycle-batteries.html https://energy.eementor.co/pages/deep-cycle-batteries
+app_surveillance.jpg https://energy.eementor.co/cdn/shop/files/ee-app-surveillance.jpg?width=1400
